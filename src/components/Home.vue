@@ -4,86 +4,47 @@
 </script>
 
 <template>
-  <div class="place-self-center">
-    <div class="business-card text-black">
-      <div class="business-card__header">
-        <div class="business-card__header__logo">
-          <img src="../assets/vue.svg" alt="logo" />
-        </div>
-        <div class="business-card__header__title">
-          <h1>Vue 3</h1>
-          <h2>Toy projects</h2>
-        </div>
-        <div class="business-card__header__author">
-          <h3>Author</h3>
-          <h4>Yujin</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <article>
-    <h1>Vue 3 토이 프로젝트들</h1>
-    <p>Vue 3 기반 자잘한 프로젝트들을 만들어보는 공간입니다.</p>
+  <div class="flex h-full w-full flex-col justify-center">
+    <h1 class="text-2xl">
+      Vue 3 토이 프로젝트들 (<a
+        href="https://github.com/zzoyu/small-toys"
+        target="_blank"
+        >Github</a
+      >)
+    </h1>
     <p>
-      콘웨이의 생명 게임, 콘페티, 미니 게임 등을 만들어보며 Vue 3의 기능을
-      익히고 있습니다.
+      콘웨이의 생명 게임, 폭죽, 미니 게임 등을 만들어보며 연습하는 공간입니다.
     </p>
-    <hr />
+    <hr class="mt-8 p-4" />
     <ul>
-      <li>콘웨이의 생명 게임</li>
+      <li>
+        <router-link to="/GOL">콘웨이의 생명 게임</router-link>
+        <!-- detailed description -->
+        <li>
+          콘웨이의 생명 게임은 1970년대에 존 콘웨이가 고안한 것으로, 2차원 격자 위에서
+          각각의 생명이 존재하고, 이 생명은 규칙에 따라 살아남거나 죽음을 맞이합니다.
+        </li>
 
-      <li>콘페티</li>
+      </li>
+      <li>
+        <router-link to="/conffeti">폭죽</router-link>
+        <li>
+          캔버스 기반 폭죽 이펙트를 구현하였습니다.
+        </li>
+      </li>
     </ul>
-  </article>
+  </div>
 </template>
 
 <style scoped>
-.business-card {
-  width: 400px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+/* pretty list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.business-card__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.business-card__header__logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.business-card__header__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.business-card__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.business-card__body__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+li {
+  margin: 0.5rem 0;
 }
 </style>

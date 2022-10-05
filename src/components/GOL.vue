@@ -14,7 +14,7 @@ const grid = ref<boolean[][]>();
 const next = ref<boolean[][]>();
 const running = ref(false);
 const interval = ref(0);
-const intervalTime = ref(200);
+const intervalTime = ref(120);
 
 const randomizeCount = ref(10);
 
@@ -115,7 +115,7 @@ const getNeighbors = (grid: boolean[][], x: number, y: number) => {
     }
   }
 
-  console.log(count);
+  // console.log(count);
 
   return count;
 };
